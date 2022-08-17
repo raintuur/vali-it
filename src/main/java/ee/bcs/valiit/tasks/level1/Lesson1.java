@@ -3,7 +3,7 @@ package ee.bcs.valiit.tasks.level1;
 public class Lesson1 {
 
     public static void main(String[] args) {
-        // Siia sisse võid sa kirjutada koodi, et testida kas su meetodid töötavad korrektsel
+        // Siia sisse võid sa kirjutada koodi, et testida kas su meetodid töötavad korrektselt
 
     }
 
@@ -51,9 +51,9 @@ public class Lesson1 {
     // isLeapYear(1900)     tagastab    false
     // isLeapYear(2021)     tagastab    false
     // isLeapYear(2020)     tagastab    true
-//    public static boolean isLeapYear(int year) {
-//        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-//    }
+    public static boolean isLeapYear(int year) {
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    }
 
     // TODO: tagasta x-i vastand väärtus
     // invertBoolean(false)  tagastab    true
@@ -68,7 +68,7 @@ public class Lesson1 {
     // oneBooleanIsTrue(true, true)    tagastab    false
     // oneBooleanIsTrue(false, false)  tagastab    false
     public static boolean oneBooleanIsTrue(boolean x1, boolean x2) {
-        return (x1 && !x2) || (!x1 && x2);
+        return (x1 && !x2) || ((!x1 && x2));
     }
 
     // TODO: tagasta true kui paaritu arv sisend muutujatest on true
@@ -98,7 +98,4 @@ public class Lesson1 {
     }
 
 
-    public static boolean isLeapYear(int i) {
-        return false;
-    }
 }
