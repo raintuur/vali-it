@@ -14,7 +14,13 @@ public class Lesson2 {
     // min(2, -3)   tagastab   -3
     // min(-3,-3)   tagastab   -3
     public static int min(int a, int b) {
-        return 0;
+        return a < b ? a : b;
+
+//        if (a < b) {
+//            return a;
+//        } else {
+//            return b;
+//        }
     }
 
     // TODO tagasta a ja b suurim väärtus
@@ -22,7 +28,11 @@ public class Lesson2 {
     // max(2, -3)   tagastab   2
     // min(-3,-3)   tagastab  -3
     public static int max(int a, int b) {
-        return 0;
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
     }
 
     // TODO tagasta kolmest arvust kõige väiksem
@@ -33,7 +43,10 @@ public class Lesson2 {
     // min3(1, 2, 4)    tagastab     1
     // min3(1, 2,-5)    tagastab    -5
     public static int min3(int a, int b, int c) {
-        return 0;
+        int minAB = min(a, b);
+        int minBC = min(b, c);
+        int minABC = min(minAB, minBC);
+        return minABC;
     }
 
     // TODO tagasta kolmest arvust kõige suurem
@@ -43,14 +56,21 @@ public class Lesson2 {
     // max3(3, 2, 4)    tagastab    4
     // max3(4, 2, 4)    tagastab    4
     public static int max3(int a, int b, int c) {
-        return 0;
+        int maxAB = max(a, b);
+        int maxBC = max(b, c);
+        int maxABC = max(maxAB, maxBC);
+        return maxABC;
     }
 
     // TODO tagasta a absoluut arv
     // abs( 2)  tagastab    2
     // abs(-2)  tagastab    2
     public static int abs(int a) {
-        return 0;
+        if (a >= 0) {
+            return a;
+        } else {
+            return -a;
+        }
     }
 
     // TODO tagasta true, kui a on paaris arv
@@ -58,7 +78,7 @@ public class Lesson2 {
     // isEven(-4)  tagastab    true
     // isEven( 3)  tagastab    false
     public static boolean isEven(int a) {
-        return false;
+        return a % 2 == 0;
     }
 
 }
